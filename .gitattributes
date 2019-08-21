@@ -1,2 +1,3 @@
-*.java linguist-language=groovy
-*.nyar linguist-language=arc
+# 屏蔽无关文件的统计
+*.rs   linguist-vendored
+*.vue  linguist-vendored

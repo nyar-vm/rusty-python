@@ -1,0 +1,210 @@
+{
+    "app": {
+        "name": "Rusty Python",
+        "description": "Rust 实现的 Python 编译器和运行时"
+    },
+    "theme": {
+        "yellow": "#FFD43B",
+        "blue": "#3776AB",
+        "yellowDark": "#b45309",
+        "blueDark": "#1e3a5f"
+    },
+    "navigation": [
+        {
+            "id": "home",
+            "label": "首页",
+            "activeClass": "text-[#FFD43B]",
+            "inactiveClass": "text-slate-600 hover:text-[#3776AB]"
+        },
+        {
+            "id": "download",
+            "label": "安装",
+            "activeClass": "text-[#FFD43B]",
+            "inactiveClass": "text-slate-600 hover:text-[#3776AB]"
+        },
+        {
+            "id": "playground",
+            "label": "Playground",
+            "activeClass": "text-[#FFD43B]",
+            "inactiveClass": "text-slate-600 hover:text-[#3776AB]"
+        }
+    ],
+    "home": {
+        "hero": {
+            "badge": "Rust 实现的 Python 编译器和运行时",
+            "title": "Rusty Python",
+            "subtitle": "高性能 Python 实现",
+            "description": "Rusty Python 是一个用 Rust 实现的 Python 编译器和运行时，提供高性能、类型安全的 Python 代码执行环境，为 Python 生态带来新的可能性。"
+        },
+        "features": [
+            {
+                "title": "什么是 Rusty Python？",
+                "description": "Rusty Python 是一个用 Rust 语言实现的 Python 编译器和运行时，旨在提供高性能、类型安全的 Python 代码执行环境。",
+                "items": [
+                    {
+                        "title": "高性能",
+                        "description": "基于 Rust 实现，编译期优化，提供极致的性能表现"
+                    },
+                    {
+                        "title": "类型安全",
+                        "description": "强类型设计，编译期检查，减少运行时错误"
+                    },
+                    {
+                        "title": "易于集成",
+                        "description": "与现有 Python 生态无缝集成，支持标准 Python 语法"
+                    }
+                ]
+            }
+        ],
+        "highlights": [
+            {
+                "icon": "🚀",
+                "title": "编译到 WASM",
+                "description": "原生支持 WebAssembly，可在浏览器中直接运行 Python 代码，无需后端服务器。"
+            },
+            {
+                "icon": "🔓",
+                "title": "NO-GIL",
+                "description": "无全局解释器锁设计，真正的多线程并行执行，充分利用多核 CPU 性能。"
+            },
+            {
+                "icon": "⚡",
+                "title": "极致性能",
+                "description": "基于 Rust 实现，编译期优化，性能比 CPython 提升 3-10 倍。"
+            },
+            {
+                "icon": "🛡️",
+                "title": "内存安全",
+                "description": "Rust 的所有权系统保证内存安全，杜绝内存泄漏和段错误。"
+            }
+        ]
+    },
+    "download": {
+        "title": "安装 Rusty Python",
+        "description": "选择适合您操作系统的安装包",
+        "systemRequirements": [
+            {
+                "os": "Windows",
+                "requirements": [
+                    "Windows 10 或 Windows 11",
+                    "64 位处理器",
+                    "至少 2GB 内存",
+                    "至少 500MB 磁盘空间"
+                ]
+            },
+            {
+                "os": "macOS",
+                "requirements": [
+                    "macOS 11 或更高版本",
+                    "64 位处理器",
+                    "至少 2GB 内存",
+                    "至少 500MB 磁盘空间"
+                ]
+            },
+            {
+                "os": "Linux",
+                "requirements": [
+                    "Ubuntu 20.04+ 或兼容发行版",
+                    "64 位处理器",
+                    "至少 2GB 内存",
+                    "至少 500MB 磁盘空间"
+                ]
+            }
+        ],
+        "downloadOptions": [
+            {
+                "os": "Windows",
+                "version": "Windows 10/11",
+                "fileType": "64 位安装程序 (.exe)",
+                "icon": "🪟",
+                "buttonText": "安装",
+                "buttonClass": "bg-[#3776AB]"
+            },
+            {
+                "os": "macOS",
+                "version": "macOS 11+",
+                "fileType": "64 位安装程序 (.dmg)",
+                "icon": "🍎",
+                "buttonText": "安装",
+                "buttonClass": "bg-[#3776AB]"
+            },
+            {
+                "os": "Linux",
+                "version": "Ubuntu, Fedora, etc.",
+                "fileType": "64 位安装程序 (.deb, .rpm)",
+                "icon": "🐧",
+                "buttonText": "安装",
+                "buttonClass": "bg-[#3776AB]"
+            },
+            {
+                "os": "源码",
+                "version": "GitHub 仓库",
+                "fileType": "需要 Rust 1.70+",
+                "icon": "📦",
+                "buttonText": "查看",
+                "buttonClass": "bg-[#2d5f8a]"
+            }
+        ],
+        "installationSteps": [
+            {
+                "step": 1,
+                "title": "下载安装包",
+                "description": "根据您的操作系统选择合适的安装包并下载。"
+            },
+            {
+                "step": 2,
+                "title": "运行安装程序",
+                "description": "双击下载的安装包，按照提示完成安装过程。"
+            },
+            {
+                "step": 3,
+                "title": "验证安装",
+                "description": "打开终端或命令提示符，运行 <code class=\"bg-[#3776AB]/10 px-2 py-1 rounded text-[#3776AB]\">rusty-python --version</code> 验证安装是否成功。"
+            }
+        ],
+        "faq": [
+            {
+                "question": "安装过程中出现错误怎么办？",
+                "answer": "请确保您的系统满足最低要求，并尝试以管理员权限运行安装程序。如果问题仍然存在，请查看我们的 GitHub 仓库获取帮助。"
+            },
+            {
+                "question": "如何更新 Rusty Python？",
+                "answer": "您可以通过重新下载最新版本的安装包并运行安装程序来更新 Rusty Python。"
+            },
+            {
+                "question": "Rusty Python 与标准 Python 有什么区别？",
+                "answer": "Rusty Python 是用 Rust 实现的 Python 编译器和运行时，提供更高的性能和类型安全性，同时保持与标准 Python 的兼容性。"
+            }
+        ]
+    },
+    "playground": {
+        "title": "Python Playground",
+        "description": "在线测试和运行 Python 代码"
+    },
+    "footer": {
+        "sections": [
+            {
+                "title": "产品",
+                "links": [
+                    { "text": "功能特性", "href": "#" },
+                    { "text": "安装", "href": "#" },
+                    { "text": "更新日志", "href": "#" }
+                ]
+            },
+            {
+                "title": "资源",
+                "links": [{ "text": "教程", "href": "#" }, { "text": "API", "href": "#" }]
+            },
+            {
+                "title": "社区",
+                "links": [
+                    { "text": "GitHub", "href": "#" },
+                    { "text": "Discord", "href": "#" },
+                    { "text": "Twitter", "href": "#" }
+                ]
+            }
+        ],
+        "copyright": "© 2026 Rusty Python. All rights reserved.",
+        "legalLinks": [{ "text": "隐私政策", "href": "#" }, { "text": "服务条款", "href": "#" }]
+    }
+}

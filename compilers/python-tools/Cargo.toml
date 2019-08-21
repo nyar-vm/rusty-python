@@ -1,0 +1,41 @@
+[package]
+name = "python-tools"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+description = "Pure Rust collection of Python language tools for the Rusty Python ecosystem"
+repository = "https://github.com/doki-land/rusty-ssg"
+keywords = ["python", "language", "tools"]
+categories = ["development-tools"]
+
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+name = "python"
+path = "bin/python.rs"
+
+[[bin]]
+name = "python3"
+path = "bin/python.rs"
+
+[[bin]]
+name = "pip"
+path = "bin/pip.rs"
+
+[[bin]]
+name = "pytest"
+path = "bin/pytest.rs"
+
+[[bin]]
+name = "idle"
+path = "bin/idle.rs"
+
+[[bin]]
+name = "python-config"
+path = "bin/python-config.rs"
+
+[dependencies]
+oak-core = { workspace = true }
+oak-python = { workspace = true }

@@ -1,0 +1,124 @@
+[workspace]
+resolver = "3"
+members = [
+    "compilers/python",
+    "compilers/python-ir",
+    "compilers/python-lsp",
+    "compilers/python-macros",
+    "compilers/python-tools",
+    "compilers/python-types",
+    "compilers/python-wasi",
+]
+default-members = [
+    "compilers/python",
+    "compilers/python-ir",
+    "compilers/python-lsp",
+    "compilers/python-macros",
+    "compilers/python-tools",
+    "compilers/python-types",
+    "compilers/python-wasi",
+]
+
+[workspace.package]
+version = "0.0.0"
+authors = ["Aster <192607617@qq.com&gt;"]
+edition = "2024"
+license = "AGPL-3.0"
+homepage = "https://github.com/doki-land/rusty-ssg"
+repository = "https://github.com/doki-land/rusty-ssg"
+
+[workspace.dependencies]
+serde = { version = "1.0.228", features = ["derive", "rc"] }
+serde_json = { version = "1.0.149" }
+tracing = { version = "0.1.44" }
+unicode-ident = { version = "1.0.24" }
+url = { version = "2.5.8", features = ["serde"] }
+triomphe = { version = "0.1.15", default-features = false, features = ["serde"] }
+smallvec = { version = "1.15", features = ["union", "const_generics", "const_new"] }
+proc-macro2 = { version = "1.0.106" }
+quote = { version = "1.0.45" }
+syn = { version = "2.0.117", features = ["full"] }
+tokio = { version = "1.50.0", features = ["full"] }
+tracing-subscriber = { version = "0.3.22", features = ["env-filter"] }
+futures = { version = "0.3.32" }
+dashmap = { version = "6.1.0" }
+lazy_static = "1.5.0"
+itertools = "0.14.0"
+
+unicode-width = "0.2.2"
+arcstr = { version = "1.2.0", features = ["serde"] }
+indexmap = { version = "2.13.0", features = ["serde"] }
+im-rc = "15.1.0"
+num = "0.4.3"
+bigdecimal = "0.4.10"
+ordered-float = "5.1.0"
+twox-hash = "2.1.2"
+regex = "1.12"
+base64 = "0.22"
+http = "1.3.1"
+tower = "0.5.2"
+tower-http = { version = "0.6.2", features = ["cors", "trace", "fs"] }
+semantic-id = { version = "0.0.0", features = ["serde"]}
+limbo = { version = "0.0.22", features = ["index_experimental"] }
+chrono = "0.4"
+schemars = { version = "1.2.1", features = ["derive"] }
+
+walkdir = { version = "2.5.0" }
+console = "0.16.2"
+indicatif = "0.18.4"
+clap = { version = "4.5.60", features = ["derive"] }
+notify = { version = "6.1.1", default-features = false, features = ["crossbeam-channel"] }
+crossterm = "0.29.0"
+
+slug = "0.1.5"
+fs_extra = "1.3.0"
+mime_guess = "2.0.4"
+csv = "1.3.10"
+async-graphql-value = "7.2.1"
+uuid = { version = "1.22.0", features = ["v4"] }
+sha2 = "0.10.8"
+rand = "0.8.5"
+thiserror = "1.0.61"
+rayon = "1.10.0"
+pulldown-cmark = "0.11.0"
+hyper = { version = "1.0.0", features = ["full"] }
+hyper-util = { version = "0.1.20", features = ["full"] }
+toml = "0.8.0"
+hashbrown = "0.14.3"
+
+
+
+# Nargo compilers
+nargo-types = { git = "https://github.com/oovm/nargo.git", branch = "dev", version = "0.0.1" }
+nargo-parser = { git = "https://github.com/oovm/nargo.git", branch = "dev", version = "0.0.1" }
+nargo-template = { git = "https://github.com/oovm/nargo.git", branch = "dev", version = "0.0.1" }
+nargo-document = { git = "https://github.com/oovm/nargo.git", branch = "dev", version = "0.0.1" }
+# Wae server
+wae-https = { git = "https://github.com/oovm/wae.git", branch = "dev", version = "0.0.2" }
+
+# Oak parsers
+oak-core = { git = "https://github.com/ygg-lang/oaks.git", branch = "dev", version = "0.0.10" }
+oak-toml = { git = "https://github.com/ygg-lang/oaks.git", branch = "dev", version = "0.0.10" }
+oak-yaml = { git = "https://github.com/ygg-lang/oaks.git", branch = "dev", version = "0.0.10" }
+oak-json = { git = "https://github.com/ygg-lang/oaks.git", branch = "dev", version = "0.0.10" }
+oak-vfs = { git = "https://github.com/ygg-lang/oaks.git", branch = "dev", version = "0.0.10" }
+oak-markdown = { git = "https://github.com/ygg-lang/oaks.git", branch = "dev", version = "0.0.10" }
+oak-python = { git = "https://github.com/ygg-lang/oaks.git", branch = "dev", version = "0.0.10" }
+
+# JIT compilation dependencies
+cranelift = "0.100.0"
+cranelift-codegen = "0.100.0"
+cranelift-frontend = "0.100.0"
+cranelift-module = "0.100.0"
+cranelift-jit = "0.100.0"
+
+# Local dependencies
+python-types = { path = "compilers/python-types", version = "0.0.0" }
+python-ir = { path = "compilers/python-ir", version = "0.0.0" }
+
+[profile.release]
+panic = "abort"
+codegen-units = 1
+lto = true
+opt-level = "s"
+strip = true

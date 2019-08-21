@@ -1,0 +1,18 @@
+[package]
+name = "python-macros"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository = "https://github.com/nyar-vm/rusty-python"
+description = "Python macro support for Rusty Python"
+
+[dependencies]
+python-types = { workspace = true }
+python-ir = { workspace = true }
+syn = { workspace = true, features = ["full"] }
+quote = { workspace = true }
+proc-macro2 = { workspace = true }
+
+[lib]
+proc-macro = true

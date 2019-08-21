@@ -1,0 +1,12 @@
+[package]
+name = "python-types"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository = "https://github.com/nyar-vm/rusty-python"
+description = "Python value and error types for Rusty Python"
+
+[dependencies]
+serde = { workspace = true, features = ["derive"] }
+serde_json = { workspace = true }

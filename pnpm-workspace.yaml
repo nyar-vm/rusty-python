@@ -1,0 +1,9 @@
+packages:
+  - 'packages/*'
+  - 'runtimes/*'
+  - 'plugins/*'
+  - 'themes/*'
+  - 'documentation'
+  - 'benchmarks'
+  - 'examples/*'
+  - 'frontends/*'

@@ -1,0 +1,14 @@
+[package]
+publish = false
+name = "python-wasi"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository = "https://github.com/nyar-vm/rusty-python"
+description = "Python WebAssembly support for Rusty Python"
+
+[dependencies]
+python-types = { workspace = true }
+python-ir = { workspace = true }
+serde = { workspace = true, features = ["derive"] }

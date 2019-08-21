@@ -1,0 +1,13 @@
+[package]
+name = "python-ir"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository = "https://github.com/nyar-vm/rusty-python"
+description = "Python intermediate representation for Rusty Python"
+
+[dependencies]
+python-types = { workspace = true }
+oak-core = { workspace = true }
+oak-python = { workspace = true }

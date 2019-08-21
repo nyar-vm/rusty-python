@@ -1,0 +1,36 @@
+{
+    "private": true,
+    "type": "module",
+    "workspaces": [
+        "packages/*",
+        "runtimes/*",
+        "plugins/*",
+        "themes/*",
+        "documentation",
+        "benchmarks"
+    ],
+    "scripts": {
+        "doc": "cargo doc --no-deps --all-features",
+        "test": "cargo test --release",
+        "bench": "tsx benchmarks/src/benchmark.ts",
+        "fmt": "npx @biomejs/biome format --write . && cargo fmt",
+        "lint": "biome lint .",
+        "dev": "pnpm -F @vutex/documentation dev",
+        "build": "pnpm -F @vutex/documentation build",
+        "preview": "pnpm -F @vutex/documentation preview",
+        "dev:home": "pnpm -F @nyar/python-homepage dev",
+        "build:home": "pnpm -F @nyar/python-homepage build",
+        "build:release": "tsx scripts/build-release.ts",
+        "u": "cargo upgrade --workspace",
+        "p": "cargo workspace publish --resume",
+        "check:ci": "node scripts/check.mjs",
+        "check": "node scripts/check.mjs",
+        "typecheck:frontend": "pnpm -r exec tsc --noEmit",
+        "build:frontend": "pnpm -r run build"
+    },
+    "devDependencies": {
+        "@biomejs/biome": "^1.8.0",
+        "tsx": "^4.21.0"
+    },
+    "packageManager": "pnpm@10.18.3"
+}

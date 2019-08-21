@@ -1,9 +1,33 @@
+# OS
+.DS_Store/
+thumbs.db
+time-travel.*
+
 # IDE
-.idea/
 .vscode/
+.idea/
+.trae/
 .vs/
 *.iml
 
-# Java
+# Rust
 target/
-.antlr/
+Cargo.lock
+*.log
+*.txt
+.cargo/config.toml
+
+
+# Node
+node_modules/
+build/
+.wrangler/
+dist/
+static/**/*
+index.css
+pnpm-lock.yaml
+
+
+# SQLite
+*.db
+*.db-wal
